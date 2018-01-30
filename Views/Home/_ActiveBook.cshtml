@@ -1,0 +1,32 @@
+﻿@model CoolBooksFinal.Models.Books
+
+
+
+<h1>Hello</h1>
+<div class="container">
+    <div class="row first">
+        <div class="col-md-4">
+            <img style="width:200px" src="@Url.Content(Model.ImagePath)" />
+        </div>
+        <div class="col-md-4">
+            @Html.LabelFor(Model=> Model.Title, new { @class = "", style = "font-weight: bold;" })
+            
+            <br/>
+            @Html.LabelFor(Model => Model.Description, new { @class = "", style = "font-weight: bold;" })
+            
+            <br/>
+            @Html.LabelFor(Model => Model.Authors, new { @class = "", style = "font-weight: bold;" })
+            
+        </div>
+        <div class="col-md-4">
+            
+            @Html.DisplayFor(b => b.Title)
+            <br />
+            
+            @Html.DisplayFor(b => b.Description)
+            <br />
+            
+            @(String.Format("{0} {1}", Model.Authors.FirstName, Model.Authors.LastName))
+        </div>
+    </div>
+</div>

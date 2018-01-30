@@ -1,0 +1,10 @@
+﻿@model IEnumerable<CoolBooksFinal.Models.Books>
+@{
+    ViewBag.Title = "Home Page";
+}
+
+<div>
+    @Html.Partial("_ActiveBook",ViewData["booklist"] as CoolBooksFinal.Models.Books)
+</div>
+
+<img src="" />
